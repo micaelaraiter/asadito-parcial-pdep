@@ -8,6 +8,7 @@ class Persona {
 	var property elElementoRequerido
 	var posicion
 	var tipoDeComida
+	const comida = []
 		
 	method pasarUnElementoA(elemento, persona){
 		criterio.pasarUnElemento(self,elemento, persona)
@@ -52,9 +53,18 @@ class Persona {
 	
 	///Punto 2
 	method quiereComer(bandejaDeComida){
-		tipoDeComida.puedeComer(bandejaDeComida)
+		if(self.puedeComer(bandejaDeComida)){
+			self.agregarComida(bandejaDeComida)
+		}
 	}
 	
+	method puedeComer(bandejaDeComida) {
+		return tipoDeComida.puedeComer(bandejaDeComida)
+	}
+	
+	method agregarComida(bandejaDeComida){
+		comida.add(bandejaDeComida)
+	}
 	
 }
 
