@@ -1,11 +1,13 @@
 /** First Wollok example */
 import criterio.*
+import comida.*
 
 class Persona {
 	var criterio
 	var property cosasCercanas = []
 	var property elElementoRequerido
 	var posicion
+	var tipoDeComida
 		
 	method pasarUnElementoA(elemento, persona){
 		criterio.pasarUnElemento(self,elemento, persona)
@@ -47,6 +49,13 @@ class Persona {
 	method quitarElementosALaLista(comensal, elementos){
 		comensal.cosasCercanas().remove(elementos)
 	}
+	
+	///Punto 2
+	method quiereComer(bandejaDeComida){
+		tipoDeComida.puedeComer(bandejaDeComida)
+	}
+	
+	
 }
 
 
