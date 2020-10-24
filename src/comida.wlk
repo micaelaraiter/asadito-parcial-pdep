@@ -6,6 +6,10 @@ class BandejaDeComida {
 	method esDietetico(){
 	  return calorias < 500
 	}
+	
+	method esPesada(){
+		return !self.esDietetico()
+	}
 }
 
 

@@ -66,6 +66,17 @@ class Persona {
 		comida.add(bandejaDeComida)
 	}
 	
+	///3
+	method estaPipon(){
+		return self.comioAlgunaComidaPesada()
+	}
+	
+	method comioAlgunaComidaPesada(){
+		return comida.any({x => x.esPesada()})
+	}
 }
+
+
+
 
 
